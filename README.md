@@ -1,5 +1,7 @@
 # YOLOv7 model trained on cattle muzzle detection
 
+cloned from from [The Official YOLOv7 Repository](https://github.com/WongKinYiu/yolov7)
+
 Implementation of paper - [YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors](https://arxiv.org/abs/2207.02696)
 
 To run the model, download the weights from [here](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7.pt) and place it in the `root` folder.
