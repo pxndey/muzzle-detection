@@ -25,6 +25,9 @@
 
 storage.googleapis.com
 runs/*
+!runs//train//exp3//*.png
+!runs//train//exp3//*.jpg
+!runs//train//exp3//results.txt
 data/*
 data/images/*
 !data/*.yaml
