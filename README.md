@@ -4,8 +4,8 @@ Implementation of paper - [YOLOv7: Trainable bag-of-freebies sets new state-of-t
 
 To run the model, download the weights from [here](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7.pt) and place it in the `root` folder.
 
-
 ## Prerequisites
+
 Run these commands one by one when the conda terminal is active:
 
 ```shell
@@ -19,7 +19,6 @@ Run these commands one by one when the conda terminal is active:
 
 ## Training
 
-
 ```shell
     python train.py --workers 1 --device 0 --batch-size 8 --epochs 100 --img 640 640 --data data/coco.yaml --hyp data/hyp.scratch.custom.yaml --cfg cfg/training/yolov7-w6.yaml --weights yolov7_training.pt 
     #increase batch size if gpu memory is high (>12GB)
@@ -27,10 +26,12 @@ Run these commands one by one when the conda terminal is active:
 
 Training will roughly take 6 hours or more depending on your GPU (6 hours on RTX 2060)
 
+After training move the **best.pt** file from _runs/train/exp/weights_ to the root folder where the github repo resides
+
 ## Testing
 
 ```shell
-    python test.py --weights runs/train/exp/weights/best.pt --data data/coco.yaml --img 640 640 --iou 0.65 --device 0 --batch-size 8
+    python test.py --weights best.pt --data data/coco.yaml --img 640 --iou 0.65 --device 0 --batch-size 8 --task test --save-txt --save-conf
     #increase batch size if GPU memory is high
     #Change IOU confidence level as per need, default is 0.65
 ```
