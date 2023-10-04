@@ -1,14 +1,14 @@
 # YOLOv7 model trained on cattle muzzle detection
 
-cloned from from [The Official YOLOv7 Repository](https://github.com/WongKinYiu/yolov7)
+Cloned and used from [The Official YOLOv7 Repository](https://github.com/WongKinYiu/yolov7)
 
 Implementation of paper - [YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors](https://arxiv.org/abs/2207.02696)
 
-To run the model, download the weights from [here](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7.pt) and place it in the `root` folder.
+To run the model, download the weights file from [here](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7.pt) and place in the `root` folder.
 
 ## Prerequisites
 
-Run these commands one by one when the conda terminal is active:
+Run these commands one by one when the Conda terminal is active:
 
 ```shell
     #Create conda environment and install dependencies
@@ -28,7 +28,7 @@ Run these commands one by one when the conda terminal is active:
 
 Training will roughly take 6 hours or more depending on your GPU (6 hours on RTX 2060)
 
-After training move the **best.pt** file from _runs/train/exp/weights_ to the root folder where the github repo resides
+After training move the **best.pt** file from _runs/train/exp/weights_ to the root folder where the repository resides
 
 ## Testing
 
